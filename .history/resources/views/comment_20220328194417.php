@@ -17,19 +17,11 @@
         td {
       padding: 5px 10px;
       text-align: center;
- 
       
     }
-    
-
-    tr{
-      border: solid;
-    }
-
-
 
     table{
-    
+      
     }
 
     .kakomi{
@@ -47,18 +39,36 @@
     }
 
     .button {
-    background-image:url(img/cross.png);
-    background-size: 25px;
-       height: 25px;
-      width: 25px;
+    text-align: left;
+    border: 2px solid #dc70fa;
+    font-size: 12px;
+    color: #dc70fa;
+    background-color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
     outline: none;
-    border: none;
-    background-color: transparent;
 }
-
-
+.input-add {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    font-size: 14px;
+    outline: none;
+}
+.input-update {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    font-size: 14px;
+    outline: none;
+}
     .card {
     width: 50vw;
     padding: 10px;
@@ -83,29 +93,9 @@
     .content {
       margin:10px; 
     }
-
-    .bgazou{
-      background-image: url(img/detail.png);
-    }
-
-    p{
-
-color: #fff;
-
-    }
-
-    .comment{
-      text-align: left;
-    }
-    .name{
-font-size:28px;
-     display: inline;
-    }
-
-
-
     </style>
   </head>
+
   <body>
   <div class="container">
     <div class="card">
@@ -122,6 +112,10 @@ font-size:28px;
 
 
 
+          
+
+
+
         <form action="/tui2/create" method="post">
             @csrf
           <input type="text" class="input-add" name="name" />
@@ -130,8 +124,6 @@ font-size:28px;
         </form>
 
 
- <a href="{{ url('/tui2/comment') }}">アバウト</a>
-<a href="/comment">test</a>
 
           @csrf
           <div class="narabe">
@@ -141,9 +133,12 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
+
+<a href="#comment.php" class="blink">
 
 
-
+            </td>
 
             <form action="/tui2/update" method="post">
               @csrf
@@ -153,7 +148,6 @@ font-size:28px;
                 <img class="icon" src="img/heart.png">
               </td>
                           <td>
-                            </form>
               <form action="/tui2/delete" method="post" >
                     @csrf
                 <input  type="hidden" name="id" value="{{$item->id}}" >
@@ -161,13 +155,9 @@ font-size:28px;
               </form>
             </td>
               <td>
-                                <p class="comment">{{$item->name}}</p>
                 <p class="comment">{{$item->content}}</p>
               </td>
-            
-
-
-
+            </form>
 
             
           </tr>

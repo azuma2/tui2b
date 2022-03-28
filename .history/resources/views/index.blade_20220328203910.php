@@ -17,19 +17,16 @@
         td {
       padding: 5px 10px;
       text-align: center;
- 
+      
       
     }
     
 
-    tr{
-      border: solid;
-    }
 
 
 
     table{
-    
+        border: solid;
     }
 
     .kakomi{
@@ -141,9 +138,18 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
+
+<a href="#comment.php" class="blink">
 
 
 
+
+
+
+
+
+            </td>
 
             <form action="/tui2/update" method="post">
               @csrf
@@ -168,6 +174,11 @@ font-size:28px;
 
 
 
+              <form action="/tui2/delete" method="post" >
+                    @csrf
+                <input  type="hidden" name="id" value="{{$item->id}}" >
+                <input class="button" type="submit" value="" >
+              </form>
 
             
           </tr>

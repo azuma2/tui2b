@@ -112,7 +112,7 @@ font-size:28px;
       <h1 class="title">ホーム</h1>
             <div class="tui2">
               @if ($errors->has('content'))
-                  <tr>
+                  
                     <th>ERROR</th>
                   <td>
                   {{$errors->first('content')}} 
@@ -141,9 +141,14 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
+
+<a href="#comment.php" class="blink">
 
 
+            </td>
 
+div
 
             <form action="/tui2/update" method="post">
               @csrf
@@ -168,6 +173,11 @@ font-size:28px;
 
 
 
+              <form action="/tui2/delete" method="post" >
+                    @csrf
+                <input  type="hidden" name="id" value="{{$item->id}}" >
+                <input class="button" type="submit" value="" >
+              </form>
 
             
           </tr>

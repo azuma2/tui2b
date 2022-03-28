@@ -53,13 +53,14 @@ class Tui2Controller extends Controller
     }
 
 
-    
+    tui2/comment
 
     public function index2()
     {
         //表示させたいviewを指定させる
-        return view('comment');
+        return view('about_me.index2');
     }
 }
 
 
+}

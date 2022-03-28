@@ -14,6 +14,11 @@ class Tui2Controller extends Controller
         $items = DB::select('select * from tui2s');
 
 
+            $articles = [
+        ['id' => 1, 'title' => 'title1', 'data' => 'data1'],
+        ['id' => 2, 'title' => 'title2', 'data' => 'data2'],
+        ['id' => 3, 'title' => 'title3', 'data' => 'data3'],
+    ];
         
         return view('index', ['items' => $items]);
     }
@@ -53,13 +58,6 @@ class Tui2Controller extends Controller
     }
 
 
-    
 
-    public function index2()
-    {
-        //表示させたいviewを指定させる
-        return view('comment');
-    }
+
 }
-
-

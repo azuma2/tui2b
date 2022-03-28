@@ -141,9 +141,14 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
+
+<a href="#comment.php" class="blink">
 
 
+            </td>
 
+<div></div>
 
             <form action="/tui2/update" method="post">
               @csrf

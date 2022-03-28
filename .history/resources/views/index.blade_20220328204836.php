@@ -141,7 +141,12 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
 
+<a href="#comment.php" class="blink">
+
+
+            </td>
 
 
 

@@ -141,9 +141,12 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
 
 
+            </td>
 
+<div></div>
 
             <form action="/tui2/update" method="post">
               @csrf

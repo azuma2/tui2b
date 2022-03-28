@@ -143,7 +143,7 @@ font-size:28px;
             @foreach ($items as $item)
 
 
-
+<div></div>
 
             <form action="/tui2/update" method="post">
               @csrf

@@ -17,19 +17,16 @@
         td {
       padding: 5px 10px;
       text-align: center;
- 
+      
       
     }
     
 
-    tr{
-      border: solid;
-    }
 
 
 
     table{
-    
+      
     }
 
     .kakomi{
@@ -47,18 +44,30 @@
     }
 
     .button {
-    background-image:url(img/cross.png);
-    background-size: 25px;
-       height: 25px;
-      width: 25px;
+    background-image:url(img/heart.png);
+
     cursor: pointer;
     transition: 0.4s;
     outline: none;
-    border: none;
-    background-color: transparent;
 }
-
-
+.input-add {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    font-size: 14px;
+    outline: none;
+}
+.input-update {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    font-size: 14px;
+    outline: none;
+}
     .card {
     width: 50vw;
     padding: 10px;
@@ -122,16 +131,7 @@ font-size:28px;
 
 
 
-        <form action="/tui2/create" method="post">
-            @csrf
-          <input type="text" class="input-add" name="name" />
-          <input type="text" class="input-add" name="content" />
-          <input class="button" type="submit" value="追加" />
-        </form>
 
-
- <a href="{{ url('/tui2/comment') }}">アバウト</a>
-<a href="/comment">test</a>
 
           @csrf
           <div class="narabe">
@@ -141,9 +141,24 @@ font-size:28px;
           
                     <tr>
             @foreach ($items as $item)
+            <td>
+
+<a href="#comment.php" class="blink">
 
 
 
+        <form action="/tui2/create" method="post">
+            @csrf
+          <input type="text" class="input-add" name="name" />
+          <input type="text" class="input-add" name="content" />
+          <input class="button" type="submit" value="追加" />
+        </form>
+
+
+
+
+
+            </td>
 
             <form action="/tui2/update" method="post">
               @csrf
@@ -153,7 +168,6 @@ font-size:28px;
                 <img class="icon" src="img/heart.png">
               </td>
                           <td>
-                            </form>
               <form action="/tui2/delete" method="post" >
                     @csrf
                 <input  type="hidden" name="id" value="{{$item->id}}" >
@@ -164,10 +178,26 @@ font-size:28px;
                                 <p class="comment">{{$item->name}}</p>
                 <p class="comment">{{$item->content}}</p>
               </td>
-            
+            </form>
 
+<div>
+  @if($reply->is_liked_by_auth_user())
+    <a href="{{ route('reply.unlike', ['id' => $reply->id]) }}" class="btn btn-success btn-sm">いいね<span class="badge">{{ $reply->likes->count() }}</span></a>
+  @else
+    <a href="{{ route('reply.like', ['id' => $reply->id]) }}" class="btn btn-secondary btn-sm">いいね<span class="badge">{{ $reply->likes->count() }}</span></a>
+  @endif
+</div>
 
+{{ $reply->likes->count() }}
+<a href="{{ route('ルート名') }}">
+<a href="{{ route('ルート名', ['プロパティ名'=>'値']) }}">
+             <a href="comment">rinnku</a>
 
+              <form action="/tui2/delete" method="post" >
+                    @csrf
+                <input  type="hidden" name="id" value="{{$item->id}}" >
+                <input class="button" type="submit" value="削除" >
+              </form>
 
             
           </tr>
