@@ -130,7 +130,19 @@ font-size:28px;
           @endif
 
 
+        <form action="/tui2/create" method="post">
+            @csrf
+          <input type="text" class="input-add" name="name" />
+          <input type="text" class="input-add" name="content" />
+          <input class="button" type="submit" value="追加" />
+        </form>
 
+        <form action="/tui2/create" method="post">
+            @csrf
+
+          <input type="text" class="input-add" name="content" />
+          <input class="button" type="submit" value="追加" />
+        </form>
 
 
           @csrf
@@ -163,23 +175,13 @@ font-size:28px;
               </form>
             </td>
               <td>
-                                <p class="comment">{{$item->name}}</p>
                 <p class="comment">{{$item->content}}</p>
               </td>
             </form>
 
-<div>
-  @if($reply->is_liked_by_auth_user())
-    <a href="{{ route('reply.unlike', ['id' => $reply->id]) }}" class="btn btn-success btn-sm">いいね<span class="badge">{{ $reply->likes->count() }}</span></a>
-  @else
-    <a href="{{ route('reply.like', ['id' => $reply->id]) }}" class="btn btn-secondary btn-sm">いいね<span class="badge">{{ $reply->likes->count() }}</span></a>
-  @endif
-</div>
 
-{{ $reply->likes->count() }}
-<a href="{{ route('ルート名') }}">
-<a href="{{ route('ルート名', ['プロパティ名'=>'値']) }}">
-             <a href="comment">rinnku</a>
+
+             
 
               <form action="/tui2/delete" method="post" >
                     @csrf

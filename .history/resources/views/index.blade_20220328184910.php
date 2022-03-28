@@ -176,7 +176,7 @@ font-size:28px;
   @endif
 </div>
 
-{{ $reply->likes->count() }}
+
 <a href="{{ route('ルート名') }}">
 <a href="{{ route('ルート名', ['プロパティ名'=>'値']) }}">
              <a href="comment">rinnku</a>
