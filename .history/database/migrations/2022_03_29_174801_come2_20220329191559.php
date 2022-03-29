@@ -14,7 +14,6 @@ class Come2 extends Migration
     public function up()
     {
             Schema::create2('tui2s', function (Blueprint $table) {
-            $table->id();
             $table->integer('user_id');
             $table->integer('tui2_id');
             $table->string('name2', 40);
