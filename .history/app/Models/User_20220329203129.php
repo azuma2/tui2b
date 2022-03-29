@@ -46,11 +46,11 @@ class User extends Authenticatable
      return $this->hasMany('App\Models\tui2');
 }
 
-    public function likes(){
+    public function kis(){
      return $this->hasMany('App\Models\tui2');
 }
 
-    public function come2s(){
+    public function tui2s(){
      return $this->hasMany('App\Models\tui2');
 }
 }

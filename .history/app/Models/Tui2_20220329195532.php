@@ -14,13 +14,10 @@ class Tui2 extends Model
     protected $fillable = ['content'];
 
     public static $rules = array(
-        'name' => 'required|max:20',
+        
         'content' => 'required|max:20',
     );
     
-    public function user(){ 
-        return $this->belongsTo('App\Models\user');
-}
 
 
 

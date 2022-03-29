@@ -18,9 +18,6 @@ class Tui2 extends Model
         'content' => 'required|max:20',
     );
     
-    public function user(){ 
-        return $this->belongsTo('App\Models\user');
-}
 
 
 
