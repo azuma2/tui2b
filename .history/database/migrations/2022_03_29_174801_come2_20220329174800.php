@@ -13,13 +13,7 @@ class Come2 extends Migration
      */
     public function up()
     {
-            Schema::create2('tui2s', function (Blueprint $table) {
-            $table->id('user_id');
-            $table->string('name2', 40);
-            $table->string('content2', 191);
-            $table->timestamp('created_at')->useCurrent()->nullable();
-            $table->timestamp('updated_at')->useCurrent()->nullable();
-        });
+        //
     }
 
     /**

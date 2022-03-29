@@ -14,7 +14,7 @@ class CreateTui2Table extends Migration
   public function up()
     {
         Schema::create('tui2s', function (Blueprint $table) {
-            $table->id('tui2_id');
+            $table->id('');
             $table->string('name', 40);
             $table->string('content', 191);
             $table->timestamp('created_at')->useCurrent()->nullable();
