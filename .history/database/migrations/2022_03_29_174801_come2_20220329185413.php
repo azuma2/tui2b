@@ -15,7 +15,7 @@ class Come2 extends Migration
     {
             Schema::create2('tui2s', function (Blueprint $table) {
             $table->id('user_id');
-            $table->id('tui2_id');
+            
             $table->string('name2', 40);
             $table->string('content2', 191);
             $table->timestamp('created_at')->useCurrent()->nullable();
