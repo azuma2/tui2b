@@ -22,7 +22,7 @@ class Tui2 extends Model
         return $this->belongsTo('App\Models\user');
 }
 
-protected $table = 'tui2';
+
 
 
 

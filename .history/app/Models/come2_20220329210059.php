@@ -20,7 +20,7 @@ class come2 extends Model
         return $this->belongsTo('App\Models\user');
 }
 
-protected $table = 'come2';
+protected $table = '2';
 
 public function tui2(){ 
         return $this->belongsTo('App\Models\tui2');

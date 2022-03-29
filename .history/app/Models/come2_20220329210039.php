@@ -2,29 +2,28 @@
 
 namespace App\Models;
 
-use App\Models\Tui2;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tui2 extends Model
-
+class come2 extends Model
 {
-        use HasFactory;
+    use HasFactory;
 
-    protected $fillable = ['content'];
+        protected $fillable = ['content2'];
 
     public static $rules = array(
-        'name' => 'required|max:20',
-        'content' => 'required|max:20',
+        'name2' => 'required|max:20',
+        'content2' => 'required|max:20',
     );
-    
+
     public function user(){ 
         return $this->belongsTo('App\Models\user');
 }
 
-protected $table = 'tui2';
 
 
-
+public function tui2(){ 
+        return $this->belongsTo('App\Models\tui2');
+}
 
 }
