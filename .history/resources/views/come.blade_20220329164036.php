@@ -199,14 +199,6 @@ font-size:28px;
 
 
 
-              @if ($errors->has('content2'))
-                  <tr>
-                    <th>ERROR</th>
-                  <td>
-                  {{$errors->first('content2')}} 
-                </td>
-            </tr>
-          @endif
 
 
 <tr>

@@ -17,7 +17,7 @@ Route::get('/come', [Tui2Controller::class, 'index4'])->name('tui2.index4');
 Route::get('/come', [Tui2Controller::class, 'index5']);
 
 
-Route::post('/tui2/create2', [Tui2Controller::class, 'create2']);
+Route::post('/tui2/create', [Tui2Controller::class, 'create']);
 
 
 

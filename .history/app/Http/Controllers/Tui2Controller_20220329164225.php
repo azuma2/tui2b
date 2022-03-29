@@ -58,8 +58,8 @@ class Tui2Controller extends Controller
     public function create2(Request $request)
     {
         $param = [
-            'name2' => $request->name2,
-            'content2' => $request->content2,
+            'name2' => $request->name,
+            'content2' => $request->content,
             
                 ];
         $this->validate($request, Tui2::$rules);

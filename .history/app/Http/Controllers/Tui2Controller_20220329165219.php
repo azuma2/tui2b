@@ -59,7 +59,7 @@ class Tui2Controller extends Controller
     {
         $param = [
             'name2' => $request->name2,
-            'content2' => $request->content2,
+            'content2' => $request->content,
             
                 ];
         $this->validate($request, Tui2::$rules);

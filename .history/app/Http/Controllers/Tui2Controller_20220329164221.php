@@ -58,13 +58,13 @@ class Tui2Controller extends Controller
     public function create2(Request $request)
     {
         $param = [
-            'name2' => $request->name2,
-            'content2' => $request->content2,
+            'name2' => $request->name,
+            'content2' => $request->content,
             
                 ];
         $this->validate($request, Tui2::$rules);
 
-        DB::insert('insert into tui2s (name2,content2) values (:name2,:content2)', $param);
+        DB::insert('insert into tui2s (name2,content2) values (:name,:content)', $param);
         return redirect('/');
     }
 
