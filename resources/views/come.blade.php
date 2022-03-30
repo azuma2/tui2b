@@ -226,6 +226,7 @@ font-size:28px;
   <td colspan="5">
         <form action="/tui2/create2" method="post">
             @csrf
+            <input type="text" class="area2" name="name2" />
           <input type="text" class="area2" name="content2" />
           <input class="btn" type="submit" value="追加" />
         </form>

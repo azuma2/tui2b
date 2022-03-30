@@ -24,6 +24,7 @@ class Tui2Controller extends Controller
         $param = [
             'name' => $request->name,
             'content' => $request->content,
+
             
     
                 ];
@@ -61,11 +62,13 @@ class Tui2Controller extends Controller
         $param = [
             'name2' => $request->name2,
             'content2' => $request->content2,
+            'user_id' => '1', // 適当な値で設定
+        'tui2_id' => '1' // 適当な値で設定
             
                 ];
         $this->validate($request, Come2::$rules);
 
-        DB::insert('insert into tui2s (name2,content2) values (:name2,:content2)', $param);
+         DB::insert('insert into come2s (name2,content2,user_id,tui2_id) values (:name2,:content2,:user_id,:tui2_id)', $param); // user_id と tui2_id をinsert 文に追加
         return redirect('/');
     }
 
@@ -88,6 +91,9 @@ class Tui2Controller extends Controller
 
     public function index4()
     {
+        $items = Tui2::all();
+        $items = DB::select('select * from tui2s');
+
         //表示させたいviewを指定させる
         return view('come', ['items' => $items]);
     }
