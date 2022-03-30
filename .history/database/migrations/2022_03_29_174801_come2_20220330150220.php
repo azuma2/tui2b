@@ -18,7 +18,7 @@ class Come2 extends Migration
             $table->integer('user_id');
             $table->integer('tui2_id');
             $table->string('name2', 40);
-            $table->string('content2', 191);
+            $table->string('content2s', 191);
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

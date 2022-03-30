@@ -13,7 +13,7 @@ class Come2 extends Migration
      */
     public function up()
     {
-            Schema::create('come2s', function (Blueprint $table) {
+            Schema::create2('s', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
             $table->integer('tui2_id');
