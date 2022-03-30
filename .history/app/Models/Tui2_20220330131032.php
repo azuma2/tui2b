@@ -12,7 +12,6 @@ class Tui2 extends Model
         use HasFactory;
 
     protected $fillable = ['content'];
-    protected $table = 'tui2s';
 
     public static $rules = array(
         'name' => 'required|max:20',
@@ -21,5 +20,11 @@ class Tui2 extends Model
     
     public function user(){ 
         return $this->belongsTo('App\Models\user');
-    }
+}
+
+protected $table = 'tui2s';
+
+
+
+
 }
