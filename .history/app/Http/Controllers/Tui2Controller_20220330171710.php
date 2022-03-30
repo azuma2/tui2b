@@ -63,7 +63,7 @@ class Tui2Controller extends Controller
             'content2' => $request->content2,
             
                 ];
-        $this->validate($request, Come2::$rules);
+        $this->validate($request, Tui2::$rules);
 
         DB::insert('insert into tui2s (name2,content2) values (:name2,:content2)', $param);
         return redirect('/');

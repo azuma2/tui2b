@@ -123,17 +123,6 @@ font-size:28px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         <form action="/tui2/create" method="post">
             @csrf
           <input type="text" class="input-add" name="name" />
