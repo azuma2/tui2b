@@ -56,7 +56,7 @@ class Tui2Controller extends Controller
         DB::delete('delete from tui2s where id =:id', $param);
         return response()->json([
         redirect('/')
-        ], 204);
+        ], 200);
     }
 
 
@@ -76,7 +76,7 @@ class Tui2Controller extends Controller
          DB::insert('insert into come2s (name2,content2,user_id,tui2_id) values (:name2,:content2,:user_id,:tui2_id)', $param); // user_id と tui2_id をinsert 文に追加
         return response()->json([
         redirect('/')
-        ], 205);
+        ], 200);
     }
 
 
@@ -87,7 +87,7 @@ class Tui2Controller extends Controller
         //表示させたいviewを指定させる
         return response()->json([
         view('comment', ['items' => $items])
-        ], 206);
+        ], 200);
     }
 
         public function index3()
@@ -97,7 +97,7 @@ class Tui2Controller extends Controller
         
         return response()->json([
         view('comment', ['items' => $items])
-        ], 207);
+        ], 200);
     }
 
     public function index4()
@@ -108,7 +108,7 @@ class Tui2Controller extends Controller
         //表示させたいviewを指定させる
         return response()->json([
         view('come', ['items' => $items])
-        ], 208);
+        ], 200);
     }
     public function index5()
     {
@@ -119,7 +119,7 @@ class Tui2Controller extends Controller
         
         return response()->json([
         view('come', ['items' => $items,'comments' => $comments])
-        ], 209);
+        ], 200);
     }
 
 

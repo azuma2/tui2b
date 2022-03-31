@@ -164,7 +164,14 @@ font-size:28px;
 
 
 
-
+<div>
+  <img class="icon" src="img/heart.png">
+  @if($item->is_liked_by_auth_user())
+<span class="badge">いいね</span>
+  @else
+    <span class="badge">いいね１</span>
+  @endif
+</div>
 
 
 

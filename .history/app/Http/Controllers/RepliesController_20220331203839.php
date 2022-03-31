@@ -25,8 +25,8 @@ class RepliesController extends Controller
     session()->flash('success', 'You Liked the Reply.');
 
     return response()->json([
-    redirect()->back()
-    ], 210);
+    redirect()->back();
+    ], 200);
   }
 
   /**
@@ -44,6 +44,6 @@ class RepliesController extends Controller
 
     return response()->json([
     redirect()->back()
-    ], 211);
+    ], 200);
   }
 }

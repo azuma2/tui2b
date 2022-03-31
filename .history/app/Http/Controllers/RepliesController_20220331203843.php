@@ -26,7 +26,7 @@ class RepliesController extends Controller
 
     return response()->json([
     redirect()->back()
-    ], 210);
+    ], 200);
   }
 
   /**
@@ -44,6 +44,6 @@ class RepliesController extends Controller
 
     return response()->json([
     redirect()->back()
-    ], 211);
+    ], 200);
   }
 }

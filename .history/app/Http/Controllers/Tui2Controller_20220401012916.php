@@ -119,7 +119,7 @@ class Tui2Controller extends Controller
         
         return response()->json([
         view('come', ['items' => $items,'comments' => $comments])
-        ], 209);
+        ], 200);
     }
 
 

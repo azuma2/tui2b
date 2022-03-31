@@ -108,7 +108,7 @@ class Tui2Controller extends Controller
         //表示させたいviewを指定させる
         return response()->json([
         view('come', ['items' => $items])
-        ], 208);
+        ], 200);
     }
     public function index5()
     {
@@ -119,7 +119,7 @@ class Tui2Controller extends Controller
         
         return response()->json([
         view('come', ['items' => $items,'comments' => $comments])
-        ], 209);
+        ], 200);
     }
 
 

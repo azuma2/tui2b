@@ -70,7 +70,7 @@ return [
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => 'tui2b_test',
-            'username' => 'root',
+            'username' => env('DB_USERNAME', 'forge'),
             'password' => '',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',

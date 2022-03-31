@@ -44,6 +44,6 @@ class RepliesController extends Controller
 
     return response()->json([
     redirect()->back()
-    ], 211);
+    ], 200);
   }
 }

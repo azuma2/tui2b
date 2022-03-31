@@ -24,9 +24,3 @@ Route::post('/tui2/create2', [Tui2Controller::class, 'create2']);
 
 Route::get('/reply/like/{id}', [RepliesController::class, 'like'])->name('reply.like');
 Route::get('/reply/unlike/{id}', [RepliesController::class, 'unlike'])->name('reply.unlike');
-
-
-
-Route::get('/reply/unlike/{id}', [RepliesController::class, 'unlike'])->name('reply.unlike');
-
-

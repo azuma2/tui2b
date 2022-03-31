@@ -27,6 +27,5 @@ Route::get('/reply/unlike/{id}', [RepliesController::class, 'unlike'])->name('re
 
 
 
-Route::get('/reply/unlike/{id}', [RepliesController::class, 'unlike'])->name('reply.unlike');
 
 
