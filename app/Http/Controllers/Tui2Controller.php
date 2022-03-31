@@ -13,10 +13,11 @@ class Tui2Controller extends Controller
     {
         $items = Tui2::all();
         $items = DB::select('select * from tui2s');
+        $comments = Come2::all();
 
 
         
-        return view('index', ['items' => $items]);
+        return view('index', ['items' => $items,'comments' => $comments]);
     }
 
     public function create(Request $request)
@@ -99,8 +100,12 @@ class Tui2Controller extends Controller
     }
     public function index5()
     {
-        $items = Come2::all();
-        return view('come', ['items' => $items]);
+        
+        $comments = Come2::all();
+        $items = Tui2::all();
+        
+        
+        return view('come', ['items' => $items,'comments' => $comments]);
     }
 
 

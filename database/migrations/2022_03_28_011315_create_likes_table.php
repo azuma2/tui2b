@@ -17,8 +17,9 @@ class CreateLikesTable extends Migration
       $table->id();
       $table->integer('user_id')->nullable();
       $table->integer('tui2_id');
-      $table->integer('reply_id')->unsigned();
-      $table->timestamps();
+      $table->timestamp('created_at')->useCurrent()->nullable();
+      $table->timestamp('updated_at')->useCurrent()->nullable();
+      
    });
   
  }

@@ -164,7 +164,7 @@ font-size:28px;
 
 <div>
   <img class="icon" src="img/heart.png">
-  {{ $param->likes->count() }}
+  {{ $item->likes->count() }}
 
 
 </div>

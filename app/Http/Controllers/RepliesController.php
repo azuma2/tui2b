@@ -18,7 +18,7 @@ class RepliesController extends Controller
   public function like($id)
   {
     Like::create([
-      'reply_id' => $id,
+      'tui2_id' => $id,
       'user_id' => Auth::id(),
     ]);
 
@@ -35,14 +35,11 @@ class RepliesController extends Controller
    */
   public function unlike($id)
   {
-    $like = Like::where('reply_id', $id)->where('user_id', Auth::id())->first();
+    $like = Like::where('tui2_id', $id)->where('user_id', Auth::id())->first();
     $like->delete();
 
     session()->flash('success', 'You Unliked the Reply.');
 
     return redirect()->back();
   }
-
-
-
 }

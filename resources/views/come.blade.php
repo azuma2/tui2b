@@ -210,7 +210,7 @@ font-size:28px;
 
 
 <tr>
-  @foreach ($items as $item)
+  @foreach ($comments as $item)
   <td colspan="5">
 <p class="comment">ゲスト</p>
     <p class="comment">{{$item->content2}}</p>
