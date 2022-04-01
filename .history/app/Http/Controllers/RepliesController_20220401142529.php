@@ -29,7 +29,7 @@ class RepliesController extends Controller
   {
     Like::create([
       'tui2_id' => $id,
-    'user_id' => Auth::id(),
+      'user_id' => Auth::id(),
     ]);
 
     session()->flash('success', 'You Liked the Reply.');

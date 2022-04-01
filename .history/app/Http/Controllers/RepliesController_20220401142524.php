@@ -13,9 +13,9 @@ class RepliesController extends Controller
 {
   // only()の引数内のメソッドはログイン時のみ有効
  // public function __construct()
- // {
-//    $this->middleware(['auth', 'verified'])->only(['like', 'unlike']);
-//  }
+  {
+    $this->middleware(['auth', 'verified'])->only(['like', 'unlike']);
+  }
 
 
 
@@ -29,7 +29,7 @@ class RepliesController extends Controller
   {
     Like::create([
       'tui2_id' => $id,
-    'user_id' => Auth::id(),
+      'user_id' => Auth::id(),
     ]);
 
     session()->flash('success', 'You Liked the Reply.');

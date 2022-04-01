@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tui2Controller;
-use App\Http\Controllers\RepliesController;
 
 Route::get('/', [Tui2Controller::class, 'index']);
 Route::post('/tui2/create', [Tui2Controller::class, 'create']);

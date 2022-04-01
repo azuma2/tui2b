@@ -4,18 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Tui2;
 use App\Models\Come2;
-use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
+<?php
 class RepliesController extends Controller
 {
   // only()の引数内のメソッドはログイン時のみ有効
- // public function __construct()
- // {
-//    $this->middleware(['auth', 'verified'])->only(['like', 'unlike']);
-//  }
+  public function __construct()
+  {
+    $this->middleware(['auth', 'verified'])->only(['like', 'unlike']);
+  }
 
 
 
@@ -29,7 +28,7 @@ class RepliesController extends Controller
   {
     Like::create([
       'tui2_id' => $id,
-    'user_id' => Auth::id(),
+      'user_id' => Auth::id(),
     ]);
 
     session()->flash('success', 'You Liked the Reply.');
